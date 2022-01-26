@@ -16,7 +16,6 @@ function draw() {
     let now = Date.now();
     for (let i = 0; i < canvas.width; i += 10) {
         for (let j = 0; j < canvas.height; j += 10) {
-            let index = (i + j * canvas.width) * 4;
             let v = noise.get(now / 2000, j / 100, i / 100);
             let angle = v * Math.PI * 2;
             let x = Math.cos(angle) * 15;
